@@ -92,11 +92,11 @@ def trade(buyer_id: int, seller_id: int, amount: int, price: int) -> None:
     with Session() as session:
         buyer = session.query(Player).filter(Player.id == buyer_id).with_for_update().one()
         if buyer.coins < price:
-            print(f"buyer coins not enough")
+            print("buyer coins not enough")
             return
         seller = session.query(Player).filter(Player.id == seller_id).with_for_update().one()
         if seller.goods < amount:
-            print(f"seller goods not enough")
+            print("seller goods not enough")
             return
         session.query(Player).filter(Player.id == buyer_id).update(
             {Player.coins: Player.coins - price, Player.goods: Player.goods + amount}
