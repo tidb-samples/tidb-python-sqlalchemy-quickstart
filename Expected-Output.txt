@@ -1,0 +1,13 @@
+Player(name=test, coins=1, goods=1)
+number of players: 201
+Player(name=test, coins=1, goods=1)
+Player(name=player_0, coins=10000, goods=100)
+Player(name=player_1, coins=10000, goods=100)
+============== trade 1 start =================
+buyer coins not enough
+============== trade 1 end ===================
+============== trade 2 start =================
+trade success
+============== trade 2 end ===================
+Player(name=buyer, coins=0, goods=10)
+Player(name=seller, coins=100, goods=90)
